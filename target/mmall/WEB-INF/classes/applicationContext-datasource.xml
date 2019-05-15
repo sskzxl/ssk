@@ -9,7 +9,7 @@
               http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
               http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <context:component-scan base-package="com.mmall"  annotation-config="true"/>
+
 
     <!-- Spring的配置文件可以引用这里配置的datasource.properties中的key-->
     <bean id="propertyConfigurer"
