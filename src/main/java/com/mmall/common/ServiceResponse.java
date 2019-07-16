@@ -42,6 +42,7 @@ public class ServiceResponse<T> implements Serializable{
     }
     public static <T> ServiceResponse<T> createBySuccess(){
         return new ServiceResponse<T>(ResponseCode.SUCCESS.getCode());
+
     }
     public static <T> ServiceResponse<T> createBySuccessMsg(String msg){
         return new ServiceResponse<T>(ResponseCode.SUCCESS.getCode(),msg);
@@ -66,5 +67,4 @@ public class ServiceResponse<T> implements Serializable{
     public static <T> ServiceResponse<T> createByErrorCodeMessage(int errorCode, String errorMessage){
         return new ServiceResponse<T>(errorCode,errorMessage);
     }
-
 }

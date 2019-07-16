@@ -1,6 +1,11 @@
 package com.mmall.dao;
 
+import com.alipay.api.domain.OrderDetailResult;
 import com.mmall.pojo.Order;
+import org.apache.ibatis.annotations.Param;
+import org.aspectj.weaver.ast.Or;
+
+import java.util.List;
 
 public interface OrderMapper {
     int deleteByPrimaryKey(Integer id);
@@ -14,4 +19,12 @@ public interface OrderMapper {
     int updateByPrimaryKeySelective(Order record);
 
     int updateByPrimaryKey(Order record);
+
+    Order selectOrderByUserIdOrderId(@Param("userId")Integer userId,@Param("orderNo")Long orderNo);
+
+    Order selectByOrderNo(Long orderNo );
+
+
+    List<Order> selectByUserId(Integer userId);
+    List<Order> selectAllOrder();
 }

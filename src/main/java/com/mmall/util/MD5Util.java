@@ -1,6 +1,9 @@
 package com.mmall.util;
 
+import org.springframework.core.io.support.PropertiesLoaderUtils;
+
 import java.security.MessageDigest;
+import java.util.Properties;
 
 /**
  * Created by dt
@@ -47,6 +50,7 @@ public class MD5Util {
     }
 
     public static String MD5EncodeUtf8(String origin) {
+
         return MD5Encode(origin, "utf-8");
     }
 
